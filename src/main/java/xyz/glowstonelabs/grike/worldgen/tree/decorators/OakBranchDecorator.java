@@ -16,7 +16,7 @@ import java.util.List;
 
 public class OakBranchDecorator extends TreeDecorator {
 
-    public static final MapCodec<OakBranchDecorator> CODEC = Codec.floatRange(0.0F, 1.0F)
+    public static final MapCodec<OakBranchDecorator> CODEC = Codec.floatRange(0.0F, 20.0F)
             .fieldOf("probability")
             .xmap(OakBranchDecorator::new, decorator -> decorator.probability);
     private final float probability;
@@ -36,7 +36,7 @@ public class OakBranchDecorator extends TreeDecorator {
                 Iterator var3 = Direction.Type.HORIZONTAL.iterator();
                 while(var3.hasNext()) {
                     Direction direction = (Direction)var3.next();
-                    if (random.nextFloat() <= 0.05F) {
+                    if (random.nextFloat() <= 0.10F) {
                         Direction direction2 = direction.getOpposite();
                         BlockPos blockPos = pos.add(direction2.getOffsetX(), 3, direction2.getOffsetZ());
                     if (generator.isAir(blockPos) && pos.getY() >= i && pos.getY() <= k - 3) {
