@@ -3,7 +3,8 @@
 	"package": "xyz.glowstonelabs.grike.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"TreeDecoratorTypeMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
